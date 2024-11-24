@@ -35,4 +35,105 @@
     margin-top: 20px;
     font-style: italic;
   }
-  
+
+  /* Fondo general */
+body {
+    font-family: 'Raleway', sans-serif;
+    background: url('../assets/paper-texture.jpg') center/cover no-repeat;
+    margin: 0;
+    color: #333;
+}
+
+/* Contenedor principal */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 100vh; /* Asegura que ocupe toda la pantalla */
+    overflow-y: auto; /* Permite scroll si el contenido es muy grande */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye padding dentro del height */
+}
+
+/* Animación del título */
+.draw-animation {
+    font-family: 'Shadows Into Light', cursive;
+    color: #ff6347;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Cita */
+.quote {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+/* Contenedor de la obra */
+.artwork-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la obra */
+.artwork-image {
+    max-width: 100%; /* Imagen no supera el ancho del contenedor */
+    max-height: 300px; /* Imagen limitada en altura */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Título de la obra */
+.artwork-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Artista */
+.artwork-artist {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Mensajes */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.loading {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .draw-animation {
+        font-size: 2rem;
+    }
+
+    .quote {
+        font-size: 1rem;
+    }
+
+    .artwork-image {
+        max-height: 200px;
+    }
+}
