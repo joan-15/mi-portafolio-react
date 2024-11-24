@@ -1,27 +1,30 @@
 import React from 'react';
-import ArtModal from '../components/ArtModal';
-import './Gallery.css';
-
-const images = [
-  { src: '/src/assets/Dibujo1.jpg', title: 'Dibujo 1', description: 'Descripción del dibujo 1' },
-  { src: '/src/assets/Dibujo2.jpg', title: 'Dibujo 2', description: 'Descripción del dibujo 2' },
-  { src: '/src/assets/Dibujo3.jpg', title: 'Dibujo 3', description: 'Descripción del dibujo 3' },
-  { src: '/src/assets/Dibujo4.jpg', title: 'Dibujo 4', description: 'Descripción del dibujo 4' },
-  { src: '/src/assets/Dibujo5.jpg', title: 'Dibujo 5', description: 'Descripción del dibujo 5' },
-];
+import Dibujo1 from '../assets/Dibujo1.jpg';
+import Dibujo2 from '../assets/Dibujo2.jpg';
+import Dibujo3 from '../assets/Dibujo3.jpg';
+import Dibujo4 from '../assets/Dibujo4.jpg';
+import Dibujo5 from '../assets/Dibujo5.jpg';
+import './Gallery.css'; // Ruta corregida para archivos en la misma carpeta
 
 const Gallery = () => {
-  return (
-    <div className="gallery-container">
-      {images.map((image, index) => (
-        <div key={index} className="gallery-card">
-          <img src={image.src} alt={image.title} className="gallery-image" />
-          <h3>{image.title}</h3>
-          <p>{image.description}</p>
+    const artworks = [
+        { id: 1, title: 'Dibujo 1', image: Dibujo1 },
+        { id: 2, title: 'Dibujo 2', image: Dibujo2 },
+        { id: 3, title: 'Dibujo 3', image: Dibujo3 },
+        { id: 4, title: 'Dibujo 4', image: Dibujo4 },
+        { id: 5, title: 'Dibujo 5', image: Dibujo5 },
+    ];
+
+    return (
+        <div className="gallery-container">
+            {artworks.map((art) => (
+                <div key={art.id} className="gallery-card">
+                    <img src={art.image} alt={art.title} className="gallery-image" />
+                    <h3>{art.title}</h3>
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 };
 
 export default Gallery;

@@ -1,35 +1,51 @@
-.gallery {
+.gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 20px; /* Espacio entre las tarjetas */
     padding: 20px;
-    background-color: #fffbe6; /* Textura simulada */
-  }
-  
-  .gallery-item {
+    justify-content: center;
+}
+
+.gallery-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-item img {
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.gallery-card:hover {
+    transform: scale(1.05);
+}
+
+.gallery-image {
     width: 100%;
     height: auto;
-    display: block;
-  }
-  
-  .gallery-item p {
-    margin: 10px 0;
-    font-size: 16px;
+    max-width: 250px; /* Tamaño máximo más grande */
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.gallery-card h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin: 0;
     color: #333;
-  }
-  
-  .gallery-item:hover {
-    transform: scale(1.05); /* Animación al pasar el mouse */
-  }
-  
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}

@@ -1,40 +1,39 @@
-/* Agrega una textura de papel como fondo */
+/* Fondo de textura de papel */
 body {
     font-family: 'Raleway', sans-serif; /* Cambia a una fuente artística */
     background: url('../assets/paper-texture.jpg') center/cover no-repeat;
     margin: 0;
     color: #333;
-  }
-  
-  /* Ajusta el estilo de títulos */
-  h1, h2, h3 {
+}
+
+/* Ajusta el estilo de títulos */
+h1, h2, h3 {
     font-family: 'Shadows Into Light', cursive; /* Fuente manuscrita */
     color: #ff6347; /* Coral */
     text-align: center;
-  }
-  
-  /* Botones animados con trazos */
-  button {
+}
+
+/* Botones animados con trazos */
+button {
     font-family: 'Raleway', sans-serif;
     background-color: #ffe4b5; /* Amarillo pastel */
     border: 2px solid #333;
     padding: 10px 20px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     transform: scale(1.1);
     background-color: #ffb6c1; /* Rosa pastel */
-  }
-  
-  /* Enlaces */
-  a {
+}
+
+/* Enlaces */
+a {
     color: #0066cc;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
+}
