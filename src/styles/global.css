@@ -37,3 +37,27 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+button {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
