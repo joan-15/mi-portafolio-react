@@ -1,9 +1,10 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer style={{ textAlign: 'center', padding: '1rem', background: '#333', color: '#fff' }}>
-      <p>© 2024 Mi Portafolio React. Todos los derechos reservados.</p>
+    <footer className="footer">
+      <p>© 2024 Tu Portafolio - Todos los derechos reservados</p>
     </footer>
   );
 };

@@ -1,12 +1,7 @@
-import React from 'react';
-
-const QuoteCard = ({ quote, author }) => {
-  return (
+const QuoteCard = ({ quote }) => (
     <div className="quote-card">
-      <p>{quote}</p>
-      <small>- {author}</small>
+      <p>"{quote.text}"</p>
+      <h4>- {quote.author || 'Anónimo'}</h4>
     </div>
   );
-};
-
-export default QuoteCard;
+  

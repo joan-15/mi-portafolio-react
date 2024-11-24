@@ -1,52 +1,40 @@
+/* Agrega una textura de papel como fondo */
 body {
+    font-family: 'Raleway', sans-serif; /* Cambia a una fuente artística */
+    background: url('../assets/paper-texture.jpg') center/cover no-repeat;
     margin: 0;
-    font-family: Arial, sans-serif;
+    color: #333;
   }
   
-  .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+  /* Ajusta el estilo de títulos */
+  h1, h2, h3 {
+    font-family: 'Shadows Into Light', cursive; /* Fuente manuscrita */
+    color: #ff6347; /* Coral */
+    text-align: center;
   }
   
-  .gallery-image {
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-    object-fit: cover;
+  /* Botones animados con trazos */
+  button {
+    font-family: 'Raleway', sans-serif;
+    background-color: #ffe4b5; /* Amarillo pastel */
     border: 2px solid #333;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    position: relative;
-  }
-  
-  .modal-content img {
-    max-width: 90%;
-    max-height: 90%;
-  }
-  
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: red;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #ffb6c1; /* Rosa pastel */
+  }
+  
+  /* Enlaces */
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
   }
   

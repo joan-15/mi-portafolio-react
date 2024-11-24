@@ -1,33 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ArtModal from '../components/ArtModal';
-import '../styles/global.css';
+import './Gallery.css';
 
 const images = [
-  '/assets/Dibujo1.jpg',
-  '/assets/Dibujo2.jpg',
-  '/assets/Dibujo3.jpg',
-  '/assets/Dibujo4.jpg',
-  '/assets/Dibujo5.jpg',
+  { src: '/src/assets/Dibujo1.jpg', title: 'Dibujo 1', description: 'Descripción del dibujo 1' },
+  { src: '/src/assets/Dibujo2.jpg', title: 'Dibujo 2', description: 'Descripción del dibujo 2' },
+  { src: '/src/assets/Dibujo3.jpg', title: 'Dibujo 3', description: 'Descripción del dibujo 3' },
+  { src: '/src/assets/Dibujo4.jpg', title: 'Dibujo 4', description: 'Descripción del dibujo 4' },
+  { src: '/src/assets/Dibujo5.jpg', title: 'Dibujo 5', description: 'Descripción del dibujo 5' },
 ];
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Gallery</h1>
-      <div className="gallery">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Artwork ${index + 1}`}
-            onClick={() => setSelectedImage(image)}
-            className="gallery-image"
-          />
-        ))}
-      </div>
-      {selectedImage && <ArtModal image={selectedImage} onClose={() => setSelectedImage(null)} />}
+    <div className="gallery-container">
+      {images.map((image, index) => (
+        <div key={index} className="gallery-card">
+          <img src={image.src} alt={image.title} className="gallery-image" />
+          <h3>{image.title}</h3>
+          <p>{image.description}</p>
+        </div>
+      ))}
     </div>
   );
 };
